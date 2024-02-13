@@ -1,12 +1,35 @@
 {
     "albums":[
         {
-            "item_img": "fearless.jpg",
-            "item_name": "Fearless (Taylor's Version)"
-        },
-        {
-            "item_img": "fearless.jpg",
-            "item_name": "Fearless (Taylor's Version)"
+            "item_img": "1",
+            "item_name": "Voicenotes"
+        },{
+            "item_img": "2",
+            "item_name": "Rare"
+        },{
+            "item_img": "3",
+            "item_name": "Sour"
+        },{
+            "item_img": "4",
+            "item_name": "Confetti"
+        },{
+            "item_img": "5",
+            "item_name": "Succession"
+        },{
+            "item_img": "6",
+            "item_name": "Happier than ever"
+        },{
+            "item_img": "7",
+            "item_name": "30"
+        },{
+            "item_img": "8",
+            "item_name": "Lover"
+        },{
+            "item_img": "9",
+            "item_name": "Reputation"
+        },{
+            "item_img": "10",
+            "item_name": "1989"
         }
     ]
 }
