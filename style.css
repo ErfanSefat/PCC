@@ -1,3 +1,7 @@
+@font-face {
+    font-family: newyork;
+    src: url(./NewYork.otf);
+}
 :root{
     --ERF-light: #E8F0FF;
 }
@@ -11,15 +15,19 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--ERF-light);
 }
 .container{
     width: 320px;
+    display: flex;
+    flex-direction: column;
 }
 .spotifycard{
     width: 320px;
     height: 120px;
-    margin-top: 100px;
+    margin-top: 20px;
     background-color: var(--ERF-light);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.13)) grayscale(100%);
@@ -36,6 +44,12 @@ body{
     scale: 1.1;
     opacity: 50%;
 }
+.spotifycard:hover span{
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 1));
+    scale: 1.1;
+    opacity: 50%;
+    bottom: -77px;
+}
 .spotifycard img{
     position: relative;
     top: 10px;
@@ -45,13 +59,14 @@ body{
 }
 .spotifycard span{
     position: relative;
-    bottom: -20px;
-    left: 10px;
+    bottom: -70px;
+    left: -18px;
     z-index: 2;
     color: white;
     filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+    font-family: Helvetica, sans-serif;
 }
-.scroller{
+.albumscroller{
     max-width: 320px;
     position: relative;
     top: -50px;
@@ -82,7 +97,14 @@ body{
     --_animation-direction: reverse;
 }
 .name{
+    margin-top: 20px;
     color: black;
+    font-family: newyork !important;
+    font-size: 40px;
+    top: unset;
+    overflow: hidden;
+    width: 100dvw;
+    z-index: -10;
 }
 
 @keyframes scroll {
