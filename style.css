@@ -1,32 +1,60 @@
-*{transition: all 0.3s;}
+:root{
+    --ERF-light: #E8F0FF;
+}
+*{
+    transition: all 0.5s;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
 body{
     margin: 0;
     display: flex;
     justify-content: center;
+    background-color: var(--ERF-light);
 }
 .container{
     width: 320px;
 }
 .spotifycard{
     width: 320px;
-    height: 100px;
+    height: 120px;
     margin-top: 100px;
-    background-color: red;
-    overflow: hidden;
+    background-color: var(--ERF-light);
     border-radius: 20px;
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.13));
-
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.13)) grayscale(100%);
+    overflow: hidden;
+    border: solid white 5px;
+}
+.spotifycard:hover{
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+    scale: 1.1;
+    border: solid white 0px;
+}
+.spotifycard:hover img{
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 1));
+    scale: 1.1;
+    opacity: 50%;
 }
 .spotifycard img{
     position: relative;
     top: 10px;
     left: 10px;
-    z-index: 10;
+    z-index: 1;
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+}
+.spotifycard span{
+    position: relative;
+    bottom: -20px;
+    left: 10px;
+    z-index: 2;
+    color: white;
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
 }
 .scroller{
     max-width: 320px;
     position: relative;
-    top: -55px;
+    top: -45px;
 }
 .scrollerinner{
     padding-block: 4px;
@@ -39,20 +67,15 @@ body{
     height: 70px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.13));
     border-radius: 5px;
-    background-color: yellowgreen;
-    cursor: pointer;
+    background-size: cover;
 }
 .musiccard:hover{
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-    background-color: blue;
-}
-.scroller[data-animated="true"] {
-  overflow: hidden;
 }
 .scroller[data-animated="true"] .scrollerinner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
+  animation: scroll var(--_animation-duration, 20s)
     var(--_animation-direction, forwards) linear infinite;
 }   
 .scroller[data-direction="right"]{
