@@ -54,7 +54,7 @@ body{
 .scroller{
     max-width: 320px;
     position: relative;
-    top: -45px;
+    top: -50px;
 }
 .scrollerinner{
     padding-block: 4px;
@@ -80,6 +80,9 @@ body{
 }   
 .scroller[data-direction="right"]{
     --_animation-direction: reverse;
+}
+.name{
+    color: black;
 }
 
 @keyframes scroll {

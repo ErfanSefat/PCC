@@ -13,10 +13,13 @@ async function loadItems() {
   const items = await loadData();
   items.albums.forEach((item) => {
     const duplicatedItem = musiccard.cloneNode(true);
-    duplicatedItem.style.backgroundImage = `URL("./pics/${item.item_img}.png")`;
+    duplicatedItem.style.backgroundImage = `URL("./Pics/${item.item_img}.png")`;
     duplicatedItem.alt = `${item.item_name}`;
-    if(i < 5){SpotiScroll1.appendChild(duplicatedItem);}
-    else{SpotiScroll2.appendChild(duplicatedItem);}
+    if (i < 5) {
+      SpotiScroll1.appendChild(duplicatedItem);
+    } else {
+      SpotiScroll2.appendChild(duplicatedItem);
+    }
     i++;
   });
   addAnimation();
@@ -39,3 +42,4 @@ async function addAnimation() {
   });
 }
 loadItems();
+addAnimation();
